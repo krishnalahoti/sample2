@@ -1,0 +1,13 @@
+python app.py
+celery -A app.celery_app worker --loglevel=INFO --concurrency=5
+celery -A app.celery_app beat
+
+ireadrx API:
+
+pdf to pages to input for model
+lemmatizer for text cleaning
+random forest
+based on score we highlight in pdf.
+NO Post cleaning done (removes numbers from text, special characters, html text, decontraction, word ent lemmatizers).
+
+TF-IDF Vector (700 vector space).
